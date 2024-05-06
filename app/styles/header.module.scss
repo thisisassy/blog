@@ -1,0 +1,46 @@
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+
+  h1 {
+    font-size: 24px;
+    font-family: Poppins, sans-serif;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    align-items: start;
+
+    h1 {
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.globalNav {
+  display: flex;
+  column-gap: 24px;
+
+  li {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

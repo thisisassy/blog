@@ -1,0 +1,46 @@
+.sidebar {
+  max-width: 336px;
+  width: 100%;
+}
+
+.profile {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+
+  h1,
+  p {
+    color: var(--text-black);
+  }
+
+  h1 {
+    text-align: center;
+    padding-bottom: 14px;
+    font-size: var(--text-body);
+  }
+
+  p {
+    font-size: var(--text-s);
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+
+  a {
+    font-size: var(--text-body);
+    font-weight: bold;
+    padding: 10px 14px;
+    background-color: #FAD2DB;
+    color: #354093;
+    width: calc(50% - 10px);
+    text-align: center;
+
+    &.rss {
+      background-color: var(--light-white);
+      color: var(--text-black);
+    }
+  }
+}
