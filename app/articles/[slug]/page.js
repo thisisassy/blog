@@ -25,7 +25,7 @@ async function generateMetadata({ params }) {
   };
 }
 
-module.exports = async function Article({ params }) {
+module.exports = async function Article({ params, publish = '' }) {
   const { slug } = params;
   const article = await getArticleBySlug(slug);
   if (!article) return;
@@ -37,8 +37,12 @@ module.exports = async function Article({ params }) {
           <div className={styles.postHeader}>
             <h1>{article.title}</h1>
             <div className={styles.postHeaderMeta}>
-              <ul className={styles.categories}></ul>
-              <Date dateString={article.dateTime} />
+              {publish && (
+                <Date dateISO={publish} />
+              )}
+              <ul className={styles.categories}>
+
+              </ul>
             </div>
           </div>
           <div className={styles.body} dangerouslySetInnerHTML={{ __html: article.body }} />

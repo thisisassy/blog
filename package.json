@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "TZ='Asia/Tokyo' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "date-fns": "^3.6.0",
+    "date-fns-tz": "^3.1.3",
     "newt-client-js": "^3.3.2",
     "next": "14.2.3",
     "react": "^18",

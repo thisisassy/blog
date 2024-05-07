@@ -13,7 +13,8 @@ export const getArticles = cache(async () => {
     appUid: 'blog',
     modelUid: 'article',
     query: {
-      select: ['_id', 'title', 'slug', 'dateTime', 'body', 'coverImage'],
+      select: ['_id', 'title', 'slug', 'dateTime', 'body', 'coverImage', 'tags'],
+      order: ['_sys.createdAt'],
     },
   })
   return items
@@ -29,17 +30,4 @@ export const getArticleBySlug = cache(async (slug) => {
     },
   })
   return article
-})
-
-export const getTags = cache(async (tags) => {
-  const tag = await client.getContents({
-    appUid: 'blog',
-    modelUid: 'tag',
-    query: {
-      tags: {
-        in: [tags]
-      }
-    },
-  })
-  return tag
 })
