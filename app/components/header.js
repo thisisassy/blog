@@ -4,7 +4,7 @@ import styles from "../styles/header.module.scss";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <Container large>
         <div className={styles.headerInner}>
           <div className={styles.headerTitle}>
